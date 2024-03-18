@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<?php
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: ".gmdate("D, d M Y H:i:s",time()+(-1*60))." GMT");
+?>
+<html lang="en">
+    
+    <head>
+        
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width", initial-scale="1.0"/>
+        <title>Christina's Art Market</title>
+        <link
+            rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer" 
+            />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    
+    <body>
+        
+        <header>
+            
+            <div class="logo"><a href="art website.html"><img alt="logo" class="logo" src="/Users/christinaball/WEBSITE/images/Untitled_Artwork+copy+copy.png"></a></div>
+            <div><h1 class="title">CHRISTINA'S ART MARKET</h1></div>
+            <div></div>
+            <div class="shopping">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="quantity">0</span>
+                </div>
+
+            <div class="toggle_btn">
+                <i class="fa-regular fa-bars"></i>
+            </div>
+    </header>
+    <p>        
+            <div class="navbar">
+                <ul class="links">
+                    <li><a href="original_pieces.html">ORIGINAL PIECES ON CANVAS</a></li>
+                    <li><a href="prints.html">PRINTS</a></li>
+                    <li><a href="canvases.html">PRINTED CANVASES</a></li>
+                    <li><a href="greeting_cards.html">GREETING CARDS</a></li>
+                    <li><a href="iceland_photography.html">ICELAND PHOTOGRAPHY</a></li>
+                    <li><a href="tote_bags.html">TOTE BAGS</a></li>
+                    <li><a href="commissions.html">COMMISSIONS</a></li>
+                </ul></div>
+                <div class="picture"></div>
+            </p>
+                </body>
+            <div class="dropdown_menu ">
+                    <ul class="dropdown_menu_links">
+                        <li><a href="original_pieces.html">ORIGINAL PIECES ON CANVAS</a></li>
+                        <li><a href="prints.html">PRINTS</a></li>
+                        <li><a href="canvases.html">PRINTED CANVASES</a></li>
+                        <li><a href="greeting_cards.html">GREETING CARDS</a></li>
+                        <li><a href="iceland_photography.html">ICELAND PHOTOGRAPHY</a></li>
+                        <li><a href="tote_bags.html">TOTE BAGS</a></li>
+                        <li><a href="commissions.html">COMMISSIONS</a></li>
+                    </ul>
+                </div>
+                
+                <script>
+                    const toggleBtn = document.querySelector('.toggle_btn')
+                    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+                    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+                    toggleBtn.onclick = function () {
+                        dropDownMenu.classList.toggle('open')
+                        const isOpen = dropDownMenu.classList.contains('open')
+
+                        toggleBtnIcon.classList = isOpen
+                        ? 'fa-solid fa-xmark'
+                        : 'fa-solid fa-bars'
+                    }
+                </script>
+    </body>
+    
+</html>
